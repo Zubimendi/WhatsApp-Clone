@@ -59,8 +59,6 @@ function RootLayoutNav() {
       <Stack.Screen
         name="/verify/[phone]"
         options={{
-          headerTitle: "Verify Your Phone Number",
-          headerBackTitle: "Edit Number",
           headerTitleAlign: "center",
         }}
       />

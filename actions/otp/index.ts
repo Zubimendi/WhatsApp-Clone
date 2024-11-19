@@ -9,5 +9,5 @@ export const sendOTP = (
   setTimeout(() => {
     setLoading(true);
     router.push(`/verify/${phoneNumber}`); // Navigate to the root page
-  }, 2000);
+  }, 200);
 };

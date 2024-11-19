@@ -15,7 +15,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { sendOTP } from "@/actions/otp";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaskInput from "react-native-mask-input";
-
+import { NG_MASK } from "@/constants/NumberMasks";
 const Page = () => {
   const [loading, setLoading] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -54,23 +54,7 @@ const Page = () => {
               console.log(masked); // (99) 99999-9999
               console.log(unmasked); // 99999999999
             }}
-            mask={[
-              "(",
-              /\d/,
-              /\d/,
-              ")",
-              " ",
-              /\d/,
-              /\d/,
-              /\d/,
-              /\d/,
-              /\d/,
-              "-",
-              /\d/,
-              /\d/,
-              /\d/,
-              /\d/,
-            ]}
+            mask={NG_MASK}
           />
         </View>
         <Text style={styles.legal}>
